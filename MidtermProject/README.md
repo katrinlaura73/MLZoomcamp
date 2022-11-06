@@ -1,6 +1,6 @@
-#Midterm project ML Zoomcamp 2022: Prediction of obesity level
+# Midterm project ML Zoomcamp 2022: Prediction of obesity level
 
-##Description of problem and data
+## Description of problem and data
 
 In this project I examined the problem, if you can predict the obestiy level of an individual given its eating habits and pyhsical condition.
 
@@ -48,7 +48,7 @@ I searched the best parameters for the models and compared them. For comparison 
 
 The best model turned out to be Random Forest with the parameters n_estimators=140, max_depth=15 and min_samples_leaf=1.
 
-##Description of files in Github Repository
+## Description of files in Github Repository
 
 
 - Data: ObesityDataSet_raw_and_data_sinthetic.csv
@@ -72,7 +72,7 @@ The best model turned out to be Random Forest with the parameters n_estimators=1
 
 - test_predict.py: to test the dockerfilde
 
-##Description on how to use the model
+## Description on how to use the model
 
 Build the docker image: docker build -t obesity:latest .
 
