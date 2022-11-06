@@ -35,7 +35,7 @@ The calculation resulted in the following obesity levels:
 - Obesity II 35.0 to 39.9
 - Obesity III Higher than 40.
 
-##Description of project
+## Description of project
 
 In the project I first cleaned the data.
 
@@ -54,19 +54,19 @@ The best model turned out to be Random Forest with the parameters n_estimators=1
 - Data: ObesityDataSet_raw_and_data_sinthetic.csv
 
 - Jupyter Notebook: notebook.ipynb with
--- Data preparation and data clearning
--- EDA, feature importance analysis
---Model selection process and parameter tuning
+  - Data preparation and data clearning
+  - EDA, feature importance analysis
+  - Model selection process and parameter tuning
 
 - Script: train.py - in here the final model is build
 
 - model bin: The final model and Dict Vecotrizer are saved by pickle to model.boin 
 
 - predict.py. contains
--- Loading the model
--- Serving it via a web service via flask
+  - Loading the model
+  - Serving it via a web service via flask
 
---Pipenv and Pipenv.lock: to build a evironment via Pipenv
+- Pipenv and Pipenv.lock: to build a evironment via Pipenv
 
 - Dockerfile: for running the service
 
@@ -82,19 +82,32 @@ Test the docker impage: python test_predict.py
 
 If you want to test another individual than given in test_predict use the following structure: 
 
-individual = {'gender': 'male' or 'female,
+individual = {'gender': 'male' or 'female',
+
                 'family_history_with_overweight': 'yes' or 'no',
+                
                 'consumption_high_caloric_food': 'yes' or 'no',
+                
                 'consumption_between_meals': 'sometimes', 'frequently', 'always'or 'no',
+                
                 'smoke': 'yes' or 'no',
+                
                 'calories_consumption_monitoring': 'yes' or 'no',
+                
                 'consumption_alcohol': 'sometimes', 'frequently' or 'no',
+                
                 'transportation_used': 'automotive', 'public_transportation' or 'walk_or_bike',
+                
                 'age': a number of the age, must not be integer (note that the research only covered ages to 50, prediciton for ages above 50 might be incorrect),
+                
                 'consumption_vegetables': number of how often a day vegetabels are consumped in average,
+                
                 'number_meals': number of meals a day in average ,
+                
                 'consumption_water': number of liters of water to drink on a day in average,
-                'physical_activity': frequence of pysical activity on a day in average,
-                'time_techn_devices': time spend with technical devices on a day in average}
+               
+               'physical_activity': frequence of pysical activity on a day in average,
+               
+               'time_techn_devices': time spend with technical devices on a day in average}
 
 
