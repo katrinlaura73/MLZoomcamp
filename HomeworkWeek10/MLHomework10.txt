@@ -1,0 +1,50 @@
+ML Zoomcamp Homework Week 10
+
+Question 1
+
+{'get_card': True, 'get_card_probability': 0.7692649226628628}
+
+Answer is 0.769.
+
+
+Question 2
+
+kind version 0.17.0
+
+
+Question 3
+
+Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
+
+
+Question 4
+
+kubectl get services
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   8m17s
+
+
+Question 5
+
+Docker images can be loaded into your cluster nodes with:
+
+kind load docker ....
+
+
+Question 6
+
+Port 9696
+
+Question 7
+
+credit-card
+
+
+Question 8
+
+optional
+
+
+
+
+
