@@ -154,5 +154,5 @@ vacc_rates = {"firstdose_rate": {"0": number},
             
             "alldoses_rate": {"0": number},
             
-            "1_Age60+": {"0": nuber}}
+            "1_Age60+": {"0": number}}
 
