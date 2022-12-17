@@ -108,9 +108,9 @@ The best model turned out to be a Neural Network.
 
 ## Description of files in Github Repository
 - Data: 
-  -- Death rates: 'data_death.csv'
-  -- vaccination rates see under: https://opendata.ecdc.europa.eu/covid19/vaccine_tracker/csv/data.csv (file was to big for github)
-  -- prepared data for direct use in train.py: data_death_vacc.csv
+  - Death rates: 'data_death.csv'
+  - vaccination rates see under: https://opendata.ecdc.europa.eu/covid19/vaccine_tracker/csv/data.csv (file was to big for github)
+  - prepared data for direct use in train.py: data_death_vacc.csv - Vaccination rates are calculated and vaccination data group by age and number of vaccination (e.g. first, second oder first additional dose)
 
 
 - Jupyter Notebook: notebook.ipynb with
