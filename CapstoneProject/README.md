@@ -22,6 +22,27 @@ The downloadable data files contain the data on the COVID-19 vaccine rollout men
 and country. The files are updated once every two weeks on Thursdays. Data are subject to retrospective corrections; corrected datasets are released as soon 
 as processing of updated national data has been completed. You may use the data in line with ECDC’s copyright policy.
 
+#### Data dictionary
+
+|Variable |Definition|Code|
+|:-----|:----:|----:|
+|YearWeekISO | Date when the vaccine wasreceived/administered. Only weeks are allowed (e.g. “2021-W01”). | yyyy-Www |
+| ReportingCountry | ISO 3166-1-alpha-2 | two-letter code |
+| Denominator Population | denominators for target groups (total population and age- specific population obtained from Eurostat/UN).Denominators reported by countries for TargetGroup = “HCW” and TargetGroup = “LTCF”. | Numeric |
+| NumberDosesReceived |Number of vaccine doses distributed by the manufacturers to the country during the reporting week.| Numeric|
+|NumberDosesExported |Number of vaccine doses donated or sold by the country during the reporting week.| Numeric |
+| FirstDose | Number of first dose vaccine administered to individuals during the reporting week. | Numeric |
+| FirstDoseRefused | Number of individuals refusing the first vaccine dose. |Numeric |
+| SecondDose | Number of second dose vaccine administered to individuals during the reporting week. | Numeric |
+|DoseAdditional1| Number of first additional vaccine doses administered after a complete standard primary course to individuals during the reporting week.| Numeric |
+| DoseAdditional2 | Number of second additional vaccine doses administered after a complete standard primary course to individuals during the reporting week.| Numeric |
+| DoseAdditional3 | Number of third additional vaccine doses administered after a complete standard primary course to individuals during the reporting week.|Numeric|
+| DoseUnk | Number of doses administered during the reporting week where the type of dose was not specified (i.e. it is not known whether it was a first or second dose).| Numeric |
+| Region| As a minimum data should be reported at national level (Region = country code). |Country/NUTS1 or 2/GAUL1/Country specific |
+| TargetGroup | Target group for vaccination. | e. .g. ALL = Overall adults (18+), Age<18 = Overall adolescents and children (0-17 years old), 1_Age<60 = adults below 60 years of age and above 17, 1_Age60+ = adults 60 years and over|
+| Vaccine name | Name of vaccine. Additional vaccines will be added on approval or as requested. | e.g AZ = AstraZeneca - for more information see Link above
+| Population |  Age-specific population for the country |Numeric|
+
 ### Description of vaccination data
 The downloadable data file contains information for EU/EEA countries on the 14-day notification
 rate of newly reported COVID-19 cases per 100 000 population and the 14-day notification rate of
@@ -57,6 +78,21 @@ hospital and intensive care unit (ICU) admissions, when analysing the epidemiolo
 country. Most of these indicators are presented for EU/EEA Member States in the Country Overview
 report. Even when using several indicators in combination, comparisons between countries should be
 done with caution and relevant epidemiological expertise.
+
+#### Data dictionary
+
+|Variable  (as of 20200623) |Definition|Code|
+|:-----|:----:|----:|
+|Country | |String |
+|country_code |3-letter ISO country code  | |
+|continent| |String |
+|population | Eurostat |Numeric |
+|indicator |cases / deaths |String |
+|weekly_count | |Numeric |
+|year_week | |yyyy-Www|
+|rate_14_day| 14-day notification rate of reported COVID-19 cases per 100 000 population OR 14-day notification rate of reported deaths per 1 000 000 population|  Numeric |
+|cumulativ_count | |Numeric |
+|source |The European Surveillance System (TESSy),Alt. Epidemic Intelligence, national weekly data, https://www.ecdc.europa.eu/en/covid-19/data-collection | String|
 
 ## Description of project
 In the project I first cleaned the data.
@@ -106,11 +142,17 @@ The best model turned out to be a Neural Network.
 
 If you want to test another set of vaccination_rates than given in test_predict use the following structure:
 
-vacc_rates = vacc_rates = {"firstdose_rate": {"0": number},
+vacc_rates = {"firstdose_rate": {"0": number},
+
             "seconddose_rate": {"0": number},
+            
             "doseadditional1_rate": {"0": number},
+            
             "doseadditional2_rate": {"0": number},
+            
             "doseadditional3_rate": {"0": number},
+            
             "alldoses_rate": {"0": number},
+            
             "1_Age60+": {"0": nuber}}
 
